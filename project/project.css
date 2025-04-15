@@ -216,6 +216,11 @@ body::before {
   position: relative;
   width: 356px;
   height: 172px;
+  transition: all 0.2s;
+}
+
+.data:hover {
+  transform: scale(1.03);
 }
 
 .layer {
