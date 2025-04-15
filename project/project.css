@@ -196,6 +196,7 @@ body::before {
   border: none;
   color: #616d8a;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .dataCategory img {

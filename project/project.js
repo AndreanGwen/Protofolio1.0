@@ -120,3 +120,8 @@ img_1.addEventListener("click", () => {
   location.href =
     "https://drive.google.com/file/d/1y2CaPIg-UkdZo9CBsSg1O0aGtwwm1BvH/view?usp=sharing";
 });
+
+// navbar category
+const all = document.querySelectorAll(".layer");
+const totalAll = document.querySelector(".category button:nth-child(1)");
+totalAll.textContent = "All(" + all.length + ")";
