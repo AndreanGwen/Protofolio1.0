@@ -92,7 +92,7 @@ contactPopUp.addEventListener("click", () => {
 });
 
 homeNav.addEventListener("click", () => {
-  location.href = "../index.html";
+  location.href = "../indexgit .html";
 });
 
 resume.addEventListener("click", () => {
