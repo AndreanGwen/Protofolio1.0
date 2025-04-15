@@ -1,0 +1,349 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Plus Jakarta Sans, sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 1200px;
+}
+
+body::before {
+  content: "";
+  background: url(../src/background.svg);
+  background-position: center;
+  opacity: 0.4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.navbar {
+  padding: 20px 40px;
+}
+
+.navbarBefore {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.navbarTextBefore {
+  gap: 28px;
+  display: flex;
+}
+
+.navbarTextBefore a {
+  position: relative;
+  color: #616d8a;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.navbarT {
+  position: fixed;
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+}
+
+.navbarText {
+  display: flex;
+  gap: 28px;
+  border: 2px solid #183153;
+  padding: 10px;
+  border-bottom: 8px solid #183153;
+  border-left: 5px solid #183153;
+  background-color: white;
+  border-radius: 14px;
+}
+
+.navbarText a {
+  position: relative;
+  color: #000000;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#resume {
+  border-bottom: 4px solid #fab007;
+}
+
+.exceptResume::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 0%;
+  background-color: #fab007;
+  transition: width 0.3s ease-in-out;
+}
+
+.exceptResume:hover::after {
+  width: 100%;
+}
+
+.githubPage {
+  position: absolute;
+  width: 176px;
+  height: 56px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 4px solid #183052;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.githubPage:hover {
+  transform: scale(1.05);
+}
+
+.githubLogo {
+  width: 29px;
+  height: 28px;
+}
+
+#pOneGithub {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  padding: 36px;
+}
+
+.highlight-text {
+  position: relative;
+  display: inline-block;
+  font-size: 36px;
+  font-weight: 600;
+  color: #183153;
+  z-index: 1;
+}
+
+.highlight-text::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 20%;
+  width: 100%;
+  height: 40%;
+  background-color: #ffd53b8b;
+  transform: skewX(-15deg);
+  z-index: -1;
+  border-radius: 10px;
+}
+
+.twoButton {
+  display: flex;
+  gap: 12px;
+}
+
+.button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#buttonDownload {
+  width: 164px;
+  height: 68px;
+  background-color: #ffd443;
+  border-radius: 13px;
+  border: 2px solid #183052;
+  border-bottom: 8px solid #183153;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  gap: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#buttonDownload svg {
+  width: 32px;
+  height: 32px;
+}
+#buttonDownload:hover {
+  background-color: #fab007;
+}
+
+#buttonLink {
+  width: 68px;
+  height: 68px;
+  background-color: #ffffff;
+  border-radius: 13px;
+  border: 2px solid #183052;
+  border-bottom: 8px solid #183153;
+  cursor: pointer;
+}
+
+#buttonLink:hover {
+  background-color: #bbbbbb;
+}
+
+.pageMain {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.pagePdf {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pagePdf img {
+  width: 720px;
+  height: 920px;
+  border: 7px solid #183052;
+  border-radius: 5px;
+}
+
+.popUpDiv {
+  width: 100%;
+  padding: 10px;
+}
+
+.popUp {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #ffd43b;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.hamburgerMenu {
+  color: #000000;
+  height: 20px;
+  width: 20px;
+}
+
+.isiDivPopUp {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  body {
+    min-height: 100vh;
+    height: 100vh;
+  }
+
+  .navbar {
+    display: none; /* atau visibility: hidden; tergantung kebutuhan */
+  }
+
+  .popUp {
+    display: block;
+    margin-left: auto;
+  }
+
+  .bgDiv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  .isiDivPopUp {
+    width: 90%;
+    gap: 20px;
+    padding: 17px;
+    background-color: #f5f5f5;
+    border-radius: 13px;
+    position: absolute;
+    z-index: 8;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .homePopUp {
+    color: #000000;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+  }
+
+  .pagePdf img {
+    width: 90%;
+    height: 90%;
+  }
+
+  .highlight-text {
+    font-size: 30px;
+  }
+
+  .button {
+    padding: 0px 18px;
+  }
+
+  #buttonDownload {
+    width: 100px;
+    height: 55px;
+    font-size: 10px;
+  }
+
+  #buttonDownload svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  #buttonLink {
+    width: 55px;
+    height: 55px;
+  }
+
+  .pageMain {
+    width: 100%;
+    margin-top: -30px;
+  }
+
+  .button {
+    margin-left: auto;
+  }
+
+  .pagePdf {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .titleAndBtn {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+}
