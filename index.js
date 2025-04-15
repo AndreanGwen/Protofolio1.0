@@ -81,7 +81,7 @@ homePopUp.addEventListener("click", () => {
 });
 
 resumePopUp.addEventListener("click", () => {
-  location.href = "../resume/resume.html";
+  location.href = "resume/resume.html";
 });
 
 aboutPopUp.addEventListener("click", () => {
