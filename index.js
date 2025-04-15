@@ -65,7 +65,7 @@ btnThree.addEventListener("click", () => {
 });
 
 btnOne.addEventListener("click", () => {
-  location.href = "../resume/resume.html";
+  location.href = "resume/resume.html";
 });
 
 btnTwo.addEventListener("click", () => {
@@ -93,7 +93,7 @@ educationPopUp.addEventListener("click", () => {
 });
 
 projectPopUp.addEventListener("click", () => {
-  location.href = "../project/project.html";
+  location.href = "project/project.html";
 });
 
 contactPopUp.addEventListener("click", () => {
@@ -113,11 +113,11 @@ education.addEventListener("click", () => {
 });
 
 project.addEventListener("click", () => {
-  location.href = "../project/project.html";
+  location.href = "project/project.html";
 });
 
 resume.addEventListener("click", () => {
-  location.href = "../resume/resume.html";
+  location.href = "resume/resume.html";
 });
 
 contact.addEventListener("click", () => {

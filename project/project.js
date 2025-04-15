@@ -46,7 +46,7 @@ buttonPopUp.addEventListener("click", () => {
 });
 
 homePopUp.addEventListener("click", () => {
-  location.href = "../mainPage/main.html";
+  location.href = "../index.html";
 });
 
 resumePopUp.addEventListener("click", () => {
@@ -70,7 +70,7 @@ contactPopUp.addEventListener("click", () => {
 });
 
 homeNav.addEventListener("click", () => {
-  location.href = "../mainPage/main.html";
+  location.href = "../index.html";
 });
 
 resume.addEventListener("click", () => {
