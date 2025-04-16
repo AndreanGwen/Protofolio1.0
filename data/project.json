@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Automatic Lights Control ESP32",
+    "desc": "System otomatis realtime connection with ESP32.",
+    "img": "../src/image.png",
+    "link": "https://github.com/AndreanGwen/3-Lamp-controll",
+    "id": "iot"
+  },
+  {
+    "title": "SmartCar with ESP32 RTOS",
+    "desc": "System smartCar ultrasonic with esp32 RTOS.",
+    "img": "../src/SmartCar.png",
+    "link": "#",
+    "id": "iot"
+  },
+  {
+    "title": "LSP paket 4: hotspot RADIUS",
+    "desc": "Blokir website dan membuat hotspot dengan MIKHMON.",
+    "img": "../src/IMG-20250126-WA0024.jpg",
+    "link": "https://drive.google.com/file/d/1y2CaPIg-UkdZo9CBsSg1O0aGtwwm1BvH/view?usp=sharing",
+    "id": "mikrotik"
+  }
+]

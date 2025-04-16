@@ -197,6 +197,11 @@ body::before {
   color: #616d8a;
   font-weight: 600;
   cursor: pointer;
+  transition: all 0.2s;
+}
+
+.category button:hover {
+  transform: scale(1.1);
 }
 
 .dataCategory img {
@@ -240,12 +245,12 @@ body::before {
   justify-content: center;
   font-weight: 600;
   padding: 10px;
-  transition: all 0.3s;
-  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
 }
 
 .layer p:nth-child(1) {
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .layer p:nth-child(2) {
@@ -256,6 +261,11 @@ body::before {
 
 .layer:hover {
   height: 80px;
+}
+
+.layer:hover p:nth-child(2) {
+  font-size: 12px;
+  display: block;
 }
 
 @media (max-width: 500px) {

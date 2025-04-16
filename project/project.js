@@ -93,35 +93,55 @@ contact.addEventListener("click", () => {
   alert("On progress⚠️");
 });
 
-// detail category
-const layer = document.querySelectorAll(".layer");
-const img = document.querySelectorAll(".data img");
-const img_1 = img[0];
-const p2_layer_1 = layer[0].querySelectorAll("p")[1];
-const p2_layer_2 = layer[1].querySelectorAll("p")[1];
+$.ajax({
+  url: "../data/project.json",
+  success: (p) => {
+    let dataProject = p;
 
-layer[0].addEventListener("mouseover", () => {
-  p2_layer_1.style.display = "block";
+    const btnTotalAll = document.querySelector(".category button:nth-child(1)");
+    const btnMikrotik = document.querySelector(".category button:nth-child(3)");
+    const btnIOT = document.querySelector(".category button:nth-child(4)");
+    const dataCategory = document.querySelector(".dataCategory");
+
+    // Fungsi render ulang card
+    const renderCard = (data) => {
+      let projectCard = "";
+      data.forEach((element) => {
+        projectCard += `
+        <div class="data">
+          <a href="${element.link}"><img src="${element.img}" alt="" /></a>
+          <div class="layer">
+            <p>${element.title}</p>
+            <p>${element.desc}</p>
+          </div>
+        </div>`;
+      });
+      dataCategory.innerHTML = projectCard;
+    };
+
+    // Tampilkan semua data di awal
+    renderCard(dataProject);
+
+    // Total jumlah proyek
+    btnTotalAll.textContent = "All(" + dataProject.length + ")";
+
+    // Event tombol "All"
+    btnTotalAll.addEventListener("click", () => {
+      renderCard(dataProject);
+    });
+
+    // Event tombol "IOT"
+    btnIOT.addEventListener("click", () => {
+      const IOTFiltered = dataProject.filter((e) => e.id === "iot");
+      renderCard(IOTFiltered);
+    });
+
+    // event tombol Mikrotik
+    btnMikrotik.addEventListener("click", () => {
+      const mikrotikFIltered = dataProject.filter((e) => e.id === "mikrotik");
+      renderCard(mikrotikFIltered);
+    });
+  },
+
+  error: (m) => console.log(m.responseText),
 });
-
-layer[0].addEventListener("mouseleave", () => {
-  p2_layer_1.style.display = "none";
-});
-
-layer[1].addEventListener("mouseover", () => {
-  p2_layer_2.style.display = "block";
-});
-
-layer[1].addEventListener("mouseleave", () => {
-  p2_layer_2.style.display = "none";
-});
-
-img_1.addEventListener("click", () => {
-  location.href =
-    "https://drive.google.com/file/d/1y2CaPIg-UkdZo9CBsSg1O0aGtwwm1BvH/view?usp=sharing";
-});
-
-// navbar category
-const all = document.querySelectorAll(".layer");
-const totalAll = document.querySelector(".category button:nth-child(1)");
-totalAll.textContent = "All(" + all.length + ")";
