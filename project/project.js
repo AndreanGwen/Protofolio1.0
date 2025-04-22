@@ -102,6 +102,7 @@ $.ajax({
     const btnMikrotik = document.querySelector(".category button:nth-child(3)");
     const btnIOT = document.querySelector(".category button:nth-child(4)");
     const dataCategory = document.querySelector(".dataCategory");
+    const btnWeb = document.querySelector(".category button:nth-child(2)");
 
     // Fungsi render ulang card
     const renderCard = (data) => {
@@ -140,6 +141,11 @@ $.ajax({
     btnMikrotik.addEventListener("click", () => {
       const mikrotikFIltered = dataProject.filter((e) => e.id === "mikrotik");
       renderCard(mikrotikFIltered);
+    });
+
+    btnWeb.addEventListener("click", () => {
+      const btnFiltered = dataProject.filter((e) => e.id === "web");
+      renderCard(btnFiltered);
     });
   },
 

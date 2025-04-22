@@ -26,5 +26,12 @@
     "img": "../src/Screenshot 2025-04-17 at 05.18.45.png",
     "link": "https://drive.google.com/file/d/1Z0D-Vm7ylrF-SpSb9S0YaIs_Kp_H5Xnk/view?usp=sharing",
     "id": "mikrotik"
+  },
+  {
+    "title": "Calculator",
+    "desc": "Membuat calculator sederhana",
+    "img": "../src/calculator.png",
+    "link": "https://andreangwen.github.io/Calculator-/",
+    "id": "web"
   }
 ]
